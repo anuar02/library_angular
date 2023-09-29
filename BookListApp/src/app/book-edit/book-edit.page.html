@@ -1,0 +1,75 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title *ngIf="isCreate">Добавить книгу</ion-card-title>
+    <ion-card-title *ngIf="!isCreate">Редактировать</ion-card-title>
+    <ion-button (click)="close()" class="btn"
+      ><ion-icon name="close"></ion-icon
+    ></ion-button>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Название: "
+          [autofocus]="true"
+          [(ngModel)]="editBook.title"
+          placeholder="Введите Название"
+          #product_id
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Автор: "
+          [(ngModel)]="editBook.author"
+          placeholder="Введите автора"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Количество страниц: "
+          type="number"
+          [(ngModel)]="editBook.pages"
+          placeholder="Введите Количество страниц"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea
+          type="text"
+          label="Описание: "
+          [(ngModel)]="editBook.description"
+          placeholder="Введите описание"
+        ></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Язык: "
+          [(ngModel)]="editBook.language"
+          placeholder="Введите язык"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Жанр: "
+          [(ngModel)]="editBook.genre"
+          placeholder="Введите жанр"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button
+      expand="full"
+      *ngIf="!isCreate"
+      (click)="editBookData(editBook._id,editBook)"
+      >Сохранить</ion-button
+    ><ion-button expand="full" *ngIf="isCreate" (click)="createBook(editBook)"
+      >Создать
+    </ion-button>
+  </ion-card-content>
+</ion-card>

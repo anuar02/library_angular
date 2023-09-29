@@ -1,0 +1,33 @@
+.btn {
+  width: fit-content;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+ion-card {
+  color: rgb(218, 176, 176);
+  span {
+    font-weight: bold;
+    color: white;
+  }
+}
+#btn_add {
+  background-color: #5195ff;
+  border-radius: 100px;
+  width: fit-content;
+}
+ion-button {
+  span {
+    color: white;
+  }
+}
+ion-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

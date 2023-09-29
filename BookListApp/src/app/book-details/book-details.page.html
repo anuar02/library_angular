@@ -1,0 +1,31 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{searchedBook.title}}</ion-card-title>
+    <ion-button (click)="close()" class="btn"
+    ><ion-icon name="close"></ion-icon
+  ></ion-button>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Автор: {{searchedBook.author}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Количество страниц: {{searchedBook.pages}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Язык: {{searchedBook.language}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Жанр: {{searchedBook.genre}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Описание: {{searchedBook.description}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
